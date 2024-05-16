@@ -48,7 +48,7 @@ To Add the formsmodule, make these changes in (NOT in the app.module, we are put
 
 IN heroes.component.ts
 ADD
-````
+```
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
 ```
 
