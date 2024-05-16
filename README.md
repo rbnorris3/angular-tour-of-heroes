@@ -336,3 +336,6 @@ and use the NgModule for this project.
 
 # Starting Over
 ## Try 2
+
+`ng new --no-standalone angular-tour-of-heroes`
+
