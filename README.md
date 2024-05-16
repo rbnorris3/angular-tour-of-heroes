@@ -69,12 +69,12 @@ The export class HeroesComponent *REPLACES* the existing export.  Once this is c
 
 
 ### Style the heros:
-This is a little confusing. the file they are showing as an example will not match ours.There is nothing to change in the file they are showing, it was to point out the link to the css file - don't change anything in the component.ts - only add the css from the bottom of the page to the empty heroes.component.css
+This is a little confusing. the file they are showing as an example will not match ours.There is nothing to change in the file they are showing, it was to point out the link to the css file - don't change anything in the component.ts - only add the css from the bottom of the page to the empty `heroes.components.css`
 
 ### Add a click event binding:
 This is adding, not replacing. add `(click)="onSelect(hero)"` inside the button html tag
 
-### Add the click event handler
+### Add the click event handler:
 This code gets added to the `export class HeroesComponent`, so it looks like this:
 ```
 export class HeroesComponent {
