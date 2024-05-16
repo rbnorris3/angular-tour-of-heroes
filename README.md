@@ -1,5 +1,5 @@
 
-# Try 1 
+## Try 1 
 After working most of the way through the project, this was the wrong approach.
 
 SKIP DOWN TO "STARTING OVER"
@@ -335,3 +335,4 @@ like the right way to approach the project was to use --no-standalone
 and use the NgModule for this project.
 
 # Starting Over
+## Try 2
