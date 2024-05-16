@@ -1,4 +1,9 @@
 
+# Try 1 
+After working most of the way through the project, this was the wrong approach.
+
+SKIP DOWN TO "STARTING OVER"
+
 ## CHANGES to make the Angular tutorial WORK.
 
 There is inconsistency in how the different pages were written.
@@ -324,3 +329,9 @@ CHANGE:
 ```
 
 ## 6 - Get data from a server
+
+Not sure how to make this work without NgModule.  It is looking 
+like the right way to approach the project was to use --no-standalone
+and use the NgModule for this project.
+
+# Starting Over
