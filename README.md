@@ -235,8 +235,8 @@ Section should be ok.
 Section should be ok.
 
 ### Add a dashboard view
-The dashboard.component.ts needs an import for the CommonModule (for ngFor),
-and needs to be declared as standalone so that it can import the module.
+The dashboard.component.ts needs an import for the CommonModule (for ngFor), the RouterModule,
+and needs to be declared as standalone so that it can import the modules.
 
 Corrected version of `dashboard.component.ts`
 ```
