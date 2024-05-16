@@ -175,11 +175,14 @@ IN `messages.component.ts`
 ADD:
 ```
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 ```
 
 CHANGE:
 ```
-  imports: [CommonModule],
+  imports: [ CommonModule,
+    RouterModule
+   ],
 ```
 
 
@@ -269,7 +272,7 @@ export class DashboardComponent implements OnInit {
 
 ### Add the dashboard route
 ***Lies!***  We are adding this to the app.routes.ts, not their module.
-We are adding one more route, the exmple of what this looks like will be below.
+We are adding one more route, the example of what this looks like will be below.
 
 ### Add a default route
 ***More lies!*** We are adding this to the app.routes.ts, not their module.
@@ -292,3 +295,9 @@ export const routes: Routes = [
 
 ### Add dashboard link to the shell
 Section should be ok.
+
+
+### Add a hero detail route
+All of these edits should be to the `app.routes.ts` INSTEAD of the module
+
+
