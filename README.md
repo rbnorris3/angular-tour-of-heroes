@@ -176,3 +176,8 @@ ADD:
 ```
 import { CommonModule } from '@angular/common';
 ```
+
+CHANGE:
+```
+  imports: [CommonModule],
+```
