@@ -268,11 +268,11 @@ export class DashboardComponent implements OnInit {
 ```
 
 ### Add the dashboard route
-More lies!  We are adding this to the app.routes.ts, not their module.
+***Lies!***  We are adding this to the app.routes.ts, not their module.
 We are adding one more route, the exmple of what this looks like will be below.
 
 ### Add a default route
-Same lies. We are adding this to the app.routes.ts, not their module.
+***More lies!*** We are adding this to the app.routes.ts, not their module.
 
 IN `app.routes.ts`
 
