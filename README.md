@@ -12,7 +12,7 @@ The create project page is ok, and no changes are necessary here.
 
 After running `ng generate component heroes`, it link it automatically with NgModule. This is on us now?
 
-IN app.components.ts
+IN `app.component.ts`
 
 ADD
 ```
@@ -32,7 +32,8 @@ CHANGE
 Also, we need to add the module for the uppercase pipe, which is in CommonModule. This goes in the heroes.component
 
 
-IN heroes.component.ts
+IN `heroes.component.ts`
+
 ADD
 ```
 import { CommonModule } from '@angular/common';
@@ -47,7 +48,8 @@ CHANGE
 This is the same place we will add the FormModule too, which is also the next change.
 To add the `formsmodule`, make these changes in (***NOT in the app.module as stated in the tutorial***, *we are adding the imports to the hero components*)
 
-IN heroes.component.ts
+IN `heroes.component.ts`
+
 ADD
 ```
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
@@ -70,7 +72,7 @@ The export class HeroesComponent *REPLACES* the existing export.  Once this is c
 
 
 ### Style the heros:
-This is a little confusing. the file they are showing as an example will not match ours.There is nothing to change in the file they are showing, it was to point out the link to the css file - don't change anything in the component.ts - only add the css from the bottom of the page to the empty `heroes.components.css`
+This is a little confusing. the file they are showing as an example will not match ours.There is nothing to change in the file they are showing, it was to point out the link to the css file - don't change anything in the component.ts - only add the css from the bottom of the page to the empty `heroes.component.css`
 
 ### Add a click event binding:
 This is adding, not replacing. add `(click)="onSelect(hero)"` inside the button html tag
@@ -100,7 +102,8 @@ This gets added inside the button tag, so now it looks like this:
 Make the HeroDetailComponent
 There are some imports missing to make this work.
 
-IN `hero-detail.components.ts`
+IN `hero-detail.component.ts`
+
 ADD:
 ```
 import { CommonModule } from '@angular/common';
