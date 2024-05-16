@@ -230,4 +230,7 @@ export const routes: Routes = [
 
 
 ### Add RouterOutlet
-Should be ok now here.
+Section should be ok.
+
+### Add a navigation link using routerLink
+Section should be ok.
