@@ -1,8 +1,8 @@
 
-## CHANGES to make the agnular tutorial WORK.
+## CHANGES to make the Angular tutorial WORK.
 
 There is inconsistency in how the different pages were written.
-Lets make this work without using NgModule, i.e. the components are now standlone, since the later parts of the tutorial are geared towed standalone.
+Lets make this work without using NgModule, i.e. the components are now standlone, since the later parts of the tutorial look to be standalone.
 
 `ng new angular-tour-of-heroes`
 
