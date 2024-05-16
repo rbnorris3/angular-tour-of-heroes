@@ -94,6 +94,7 @@ This gets added to the bottom of the html.
 
 ### Style the selected hero: 
 This gets added inside the button tag, so now it looks like this:
+
 `   <button type="button"  (click)="onSelect(hero)" [class.selected]="hero === selectedHero">`
 
 
