@@ -123,7 +123,7 @@ CHANGE:
 Add the @Input() hero property
 the Add the @Input() stuff goes in the export class HeroDetailComponent
 
-## 4 - Add Services
+## 4 - Add services
 
 *NOTES*
 
@@ -181,3 +181,50 @@ CHANGE:
 ```
   imports: [CommonModule],
 ```
+
+
+## 5 - Add navigation
+
+### Add the AppRoutingModule
+This whole section is f*#%!ed.
+
+Don NOT run `ng generate module app-routing --flat --module=app`.
+
+The Routing is done differently in this version. We need to edit the app.routes.ts
+and also import the routing into the app.
+
+**ALSO**: Once the route is added, you will want to adjust your browser URL to `/heroes`, 
+otherwise it will display a blank page.
+
+Once the nav is added, there will be a nav bar available no matter which URL
+
+IN `app.component.ts`
+
+ADD:
+```
+import { Router, RouterModule, Routes } from '@angular/router';
+
+CHANGE:
+```
+  imports: [
+    HeroesComponent,
+    FormsModule,
+    MessagesComponent,
+    RouterModule
+  ],
+```
+
+IN `app.routes.ts`
+
+CHANGE:
+```
+//export const routes: Routes = [];
+
+export const routes: Routes = [
+    { path: 'heroes', component: HeroesComponent }
+];
+```
+
+
+### Add RouterOutlet
+Should be ok now here.
