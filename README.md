@@ -200,18 +200,20 @@ Once the nav is added, there will be a nav bar available no matter which URL
 
 IN `app.component.ts`
 
-ADD:
-```
-import { Router, RouterModule, Routes } from '@angular/router';
-```
+Changing RouterOutlet to RouterModule gives us all the routing functions, 
+which are needed for the nav links
 
 CHANGE:
 ```
-  imports: [
+import {  RouterModule, Routes } from '@angular/router';
+```
+
+CHANGE: 
+```
+  imports: [RouterModule,
     HeroesComponent,
     FormsModule,
-    MessagesComponent,
-    RouterModule
+    MessagesComponent
   ],
 ```
 
