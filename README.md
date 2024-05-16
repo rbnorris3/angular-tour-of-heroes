@@ -1,15 +1,16 @@
 
-## CHANGES to make tutorial WORK.
+## CHANGES to make the agnular tutorial WORK.
 
-Lets make this work the new way from the beginning, since the later parts of the tutorial are not using ngmodule
+There is inconsistency in how the different pages were written.
+Lets make this work without using NgModule, i.e. the components are now standlone, since the later parts of the tutorial are geared towed standalone.
 
 `ng new angular-tour-of-heroes`
 
-Rest of creat project page is ok.
+The create project page is ok, and no changes are necessary here.
 
 ## Part 1 - The hero editor
 
-after ng generate component heroes, the old way would link it automatically. This is on us now.
+After running `ng generate component heroes`, it link it automatically with NgModule. This is on us now?
 
 IN app.components.ts
 ADD
@@ -27,7 +28,7 @@ CHANGE
 
 -----------
 
-Also, we need to add the module for the uppoercase pipe, which is in CommonModule, and it needs to go in the heroes.component
+Also, we need to add the module for the uppercase pipe, which is in CommonModule. This goes in the heroes.component
 
 
 IN heroes.component.ts
@@ -43,8 +44,7 @@ CHANGE
 
 
 This is the same place we will add the FormModule too, which is also the next change.
-
-To Add the formsmodule, make these changes in (NOT in the app.module, we are putting in the hero components)
+To add the `formsmodule`, make these changes in (***NOT in the app.module as stated in the tutorial***, *we are adding the imports to the hero components*)
 
 IN heroes.component.ts
 ADD
@@ -60,24 +60,22 @@ CHANGE
 ```
 
 
------------
-
 ## Part 2 - Display a list.
 
-NOTES
+*NOTES*
 
-on displaying heroes:
-THe export class HeroesComponent REPLACES the existing export.  Once this is changed, the page will be broken until the html template is also updated.
+### Displaying heroes:
+The export class HeroesComponent *REPLACES* the existing export.  Once this is changed, the page will be broken until the html template is also updated.
 
 
-style the heros:
+### Style the heros:
 This is a little confusing. the file they are showing as an example will not match ours.There is nothing to change in the file they are showing, it was to point out the link to the css file - don't change anything in the component.ts - only add the css from the bottom of the page to the empty heroes.component.css
 
-add a click binding:
-you add adding, not replacing. add "(click)="onSelect(hero)"" inside the button html
+### Add a click event binding:
+This is adding, not replacing. add `(click)="onSelect(hero)"` inside the button html tag
 
-the add click event handler
-The code gets added to the "export class HeroesComponent ", so it looks like this:
+### Add the click event handler
+This code gets added to the `export class HeroesComponent`, so it looks like this:
 ```
 export class HeroesComponent {
   heroes = HEROES;
@@ -88,10 +86,10 @@ export class HeroesComponent {
 }
 ```
 
-the add a details section:
+### Add a details section:
 This gets added to the bottom of the html.
 
-style the selected hero: 
+### Style the selected hero: 
 This gets added inside the button tag, so now it looks like this:
 `   <button type="button"  (click)="onSelect(hero)" [class.selected]="hero === selectedHero">`
 
@@ -101,7 +99,7 @@ This gets added inside the button tag, so now it looks like this:
 Make the HeroDetailComponent
 There are some imports missing to make this work.
 
-IN dero-detail.components.ts
+IN `hero-detail.components.ts`
 ADD:
 ```
 import { CommonModule } from '@angular/common';
