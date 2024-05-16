@@ -13,12 +13,16 @@ after ng generate component heroes, the old way would link it automatically. Thi
 
 IN app.components.ts
 ADD
-`import { HeroesComponent } from './heroes/heroes.component';`
+```
+import { HeroesComponent } from './heroes/heroes.component';
+```
 
 CHANGE
-`  imports: [RouterOutlet,`
-`    HeroesComponent,`
-`  ],`
+```
+  imports: [RouterOutlet,
+    HeroesComponent,
+  ],
+```
 
 
 -----------
@@ -28,10 +32,14 @@ Also, we need to add the module for the uppoercase pipe, which is in CommonModul
 
 IN heroes.component.ts
 ADD
-`import { CommonModule } from '@angular/common';`
+```
+import { CommonModule } from '@angular/common';
+```
 
 CHANGE
-`  imports: [ CommonModule ],`
+```
+  imports: [ CommonModule ],
+```
 
 
 This is the same place we will add the FormModule too, which is also the next change.
@@ -40,12 +48,16 @@ To Add the formsmodule, make these changes in (NOT in the app.module, we are put
 
 IN heroes.component.ts
 ADD
-`import { FormsModule } from '@angular/forms'; // <-- NgModel lives here`
+````
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+```
 
 CHANGE
-`  imports: [ CommonModule,`
-`    FormsModule`
-`   ],`
+```
+  imports: [ CommonModule,
+    FormsModule
+   ],
+```
 
 
 -----------
@@ -66,13 +78,15 @@ you add adding, not replacing. add "(click)="onSelect(hero)"" inside the button 
 
 the add click event handler
 The code gets added to the "export class HeroesComponent ", so it looks like this:
-`export class HeroesComponent {`
-`  heroes = HEROES;`
-`  selectedHero?: Hero;`
-`  onSelect(hero: Hero): void {`
-`    this.selectedHero = hero;`
-`  }`
-`}`
+```
+export class HeroesComponent {
+  heroes = HEROES;
+  selectedHero?: Hero;
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
+}
+```
 
 the add a details section:
 This gets added to the bottom of the html.
@@ -89,15 +103,19 @@ There are some imports missing to make this work.
 
 IN dero-detail.components.ts
 ADD:
-`import { CommonModule } from '@angular/common';`
-`import { FormsModule } from '@angular/forms'; // <-- NgModel lives here`
-`import { Input } from '@angular/core';`
-`import { Hero } from '../hero';`
+```
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+import { Input } from '@angular/core';
+import { Hero } from '../hero';
+```
 
 CHANGE:
-`  imports: [CommonModule,`
-`    FormsModule`
-`  ],`
+```
+  imports: [CommonModule,
+    FormsModule
+  ],
+```
 
 Add the @Input() hero property
 the Add the @Input() stuff goes in the export class HeroDetailComponent
