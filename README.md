@@ -168,21 +168,18 @@ CHANGE:
 ```
 
 ### Bind to the MessageService
-The ngIf needs the common module imported, and the Routerlink later needs the RouterModule.
+The ngIf needs the common module imported
 
 IN `messages.component.ts`
 
 ADD:
 ```
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 ```
 
 CHANGE:
 ```
-  imports: [ CommonModule,
-    RouterModule
-   ],
+  imports: [CommonModule],
 ```
 
 
@@ -209,6 +206,7 @@ which are needed for the nav links
 CHANGE:
 ```
 import {  RouterModule } from '@angular/router';
+
 ```
 
 CHANGE: 
@@ -246,11 +244,13 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-dashboard',
-  imports: [ CommonModule ],
+  imports: [ CommonModule,
+      RouterModule ],
   templateUrl: './dashboard.component.html',
   styleUrls: [ './dashboard.component.css' ]
 })
@@ -298,6 +298,4 @@ Section should be ok.
 
 
 ### Add a hero detail route
-All of these edits should be to the `app.routes.ts` INSTEAD of the module
-
-
+All of these edits should be to the `app.routes.ts` INSTEAD of the module.
