@@ -2,7 +2,10 @@
 ## Try 1 
 After working most of the way through the project, this was the wrong approach.
 
-SKIP DOWN TO "STARTING OVER"
+I will retry this, here:
+
+GO TO https://github.com/rbnorris3/angular-tour-2
+
 
 ## CHANGES to make the Angular tutorial WORK.
 
@@ -337,5 +340,7 @@ and use the NgModule for this project.
 # Starting Over
 ## Try 2
 
-`ng new --no-standalone angular-tour-of-heroes`
+GO TO https://github.com/rbnorris3/angular-tour-2
+
+
 
