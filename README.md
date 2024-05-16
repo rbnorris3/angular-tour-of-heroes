@@ -299,3 +299,28 @@ Section should be ok.
 
 ### Add a hero detail route
 All of these edits should be to the `app.routes.ts` INSTEAD of the module.
+
+### DashboardComponent hero links
+Seems ok.
+
+### HeroesComponent hero links
+
+The heroes components need to import the Routing modules for routerLink.
+
+IN `heroes.component.ts`
+
+ADD:
+```
+import { RouterModule } from '@angular/router';
+```
+
+CHANGE:
+```
+  imports: [ CommonModule,
+    FormsModule,
+    HeroDetailComponent,
+    RouterModule
+   ],
+```
+
+## 6 - Get data from a server
