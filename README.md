@@ -221,8 +221,6 @@ IN `app.routes.ts`
 
 CHANGE:
 ```
-//export const routes: Routes = [];
-
 export const routes: Routes = [
     { path: 'heroes', component: HeroesComponent }
 ];
@@ -233,4 +231,64 @@ export const routes: Routes = [
 Section should be ok.
 
 ### Add a navigation link using routerLink
+Section should be ok.
+
+### Add a dashboard view
+The dashboard.component.ts needs an import for the CommonModule (for ngFor),
+and needs to be declared as standalone so that it can import the module.
+
+Corrected version of `dashboard.component.ts`
+```
+import { Component, OnInit } from '@angular/core';
+import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  standalone: true,
+  selector: 'app-dashboard',
+  imports: [ CommonModule ],
+  templateUrl: './dashboard.component.html',
+  styleUrls: [ './dashboard.component.css' ]
+})
+export class DashboardComponent implements OnInit {
+  heroes: Hero[] = [];
+
+  constructor(private heroService: HeroService) { }
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
+
+  getHeroes(): void {
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes.slice(1, 5));
+  }
+}
+```
+
+### Add the dashboard route
+More lies!  We are adding this to the app.routes.ts, not their module.
+We are adding one more route, the exmple of what this looks like will be below.
+
+### Add a default route
+Same lies. We are adding this to the app.routes.ts, not their module.
+
+IN `app.routes.ts`
+
+ADD:
+```
+import { DashboardComponent } from './dashboard/dashboard.component';
+```
+
+CHANGE:
+```
+export const routes: Routes = [
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'heroes', component: HeroesComponent } 
+];
+```
+
+### Add dashboard link to the shell
 Section should be ok.
