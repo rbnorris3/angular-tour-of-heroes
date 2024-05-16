@@ -123,5 +123,56 @@ CHANGE:
 Add the @Input() hero property
 the Add the @Input() stuff goes in the export class HeroDetailComponent
 
+## 4 - Add Services
 
+*NOTES*
 
+### Create the Hero Service
+The getHeroes() addition should be put in the `export class HeroService`
+
+### Inject the HeroService
+The constructor gets added at the top inside `export class HeroesComponent`
+
+### Add getHeroes
+Same thing, this gets added inside the `export class HeroesComponent`
+
+### Call it in ngOnInit
+Same thing, this gets added inside the `export class HeroesComponent`
+
+We need to add an additional import
+
+IN `heroes.component.ts`
+
+ADD:
+```
+import { OnInit } from '@angular/core';
+```
+
+### Create MessagesComponent
+After running the ng generate component messages, add the import to app.component.ts
+
+IN `app.component.ts`
+
+ADD:
+```
+import { MessagesComponent } from './messages/messages.component';
+```
+
+CHANGE:
+```
+  imports: [RouterOutlet,
+    HeroesComponent,
+    FormsModule,
+    MessagesComponent
+  ],
+```
+
+### Bind to the MessageService
+The ngIf needs the common module imported
+
+IN `messages.component.ts`
+
+ADD:
+```
+import { CommonModule } from '@angular/common';
+```

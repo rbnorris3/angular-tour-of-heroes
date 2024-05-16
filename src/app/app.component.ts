@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeroesComponent } from './heroes/heroes.component';
+import { MessagesComponent } from './messages/messages.component';
 
 
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
@@ -11,7 +12,8 @@ import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
   standalone: true,
   imports: [RouterOutlet,
     HeroesComponent,
-    FormsModule
+    FormsModule,
+    MessagesComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
