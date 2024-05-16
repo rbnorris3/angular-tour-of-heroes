@@ -168,7 +168,7 @@ CHANGE:
 ```
 
 ### Bind to the MessageService
-The ngIf needs the common module imported
+The ngIf needs the common module imported, and the Routerlink later needs the RouterModule.
 
 IN `messages.component.ts`
 
