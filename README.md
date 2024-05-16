@@ -13,6 +13,7 @@ The create project page is ok, and no changes are necessary here.
 After running `ng generate component heroes`, it link it automatically with NgModule. This is on us now?
 
 IN app.components.ts
+
 ADD
 ```
 import { HeroesComponent } from './heroes/heroes.component';
