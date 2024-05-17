@@ -336,7 +336,9 @@ CHANGE:
 There are two places in this section where it has you edit the app.module.ts,
 which does not exist.
 
-Instead, edit `app.config.ts` to match:
+***Instead:*** 
+
+Edit `app.config.ts` to match:
 
 ```
 import { ApplicationConfig } from '@angular/core';
