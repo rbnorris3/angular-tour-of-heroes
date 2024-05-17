@@ -1,10 +1,10 @@
 
 ## Try 1 
-After working most of the way through the project, this was the wrong approach.
+The easier way to approach this project is to use NgModules, which is no longer the default.
 
-I will retry this, here:
+To follow this approach, GO TO:
 
-GO TO https://github.com/rbnorris3/angular-tour-2
+https://github.com/rbnorris3/angular-tour-2
 
 
 ## CHANGES to make the Angular tutorial WORK.
@@ -194,7 +194,6 @@ CHANGE:
 ## 5 - Add navigation
 
 ### Add the AppRoutingModule
-This whole section is f*#%!ed.
 
 Don NOT run `ng generate module app-routing --flat --module=app`.
 
@@ -333,14 +332,31 @@ CHANGE:
 
 ## 6 - Get data from a server
 
-Not sure how to make this work without NgModule.  It is looking 
-like the right way to approach the project was to use --no-standalone
-and use the NgModule for this project.
 
-# Starting Over
-## Try 2
+### Simulate a data server
+There are two places in this section where it has you edit the app.module.ts,
+which does not exist.
 
-GO TO https://github.com/rbnorris3/angular-tour-2
+Instead, edit app.config.ts, and edit to match:
 
+```
+import { ApplicationConfig } from '@angular/core';
+import { importProvidersFrom } from '@angular/core';
+import { provideRouter } from '@angular/router';
+
+import { provideHttpClient } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [ 
+    provideHttpClient(),
+    importProvidersFrom(HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, 
+      { dataEncapsulation: false })),
+    provideRouter(routes)]
+};
+```
 
 
