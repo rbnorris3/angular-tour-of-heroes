@@ -12,11 +12,13 @@ https://github.com/rbnorris3/angular-tour-2
 There is inconsistency in how the different pages were written.
 Lets make this work without using NgModule, i.e. the components are now standlone, since the later parts of the tutorial look to be standalone.
 
+## Create the project
+
 `ng new angular-tour-of-heroes`
 
 The create project page is ok, and no changes are necessary here.
 
-## Part 1 - The hero editor
+## 1. The hero editor
 
 After running `ng generate component heroes`, it link it automatically with NgModule. This is on us now?
 
@@ -71,7 +73,7 @@ CHANGE
 ```
 
 
-## Part 2 - Display a list.
+## 2. Display a list
 
 ### Displaying heroes:
 The export class HeroesComponent *REPLACES* the existing export.  Once this is changed, the page will be broken until the html template is also updated.
@@ -104,7 +106,7 @@ This gets added inside the button tag, so now it looks like this:
 `   <button type="button"  (click)="onSelect(hero)" [class.selected]="hero === selectedHero">`
 
 
-## 3 - Create a feature component.
+## 3. Create a feature component.
 
 Make the HeroDetailComponent
 There are some imports missing to make this work.
@@ -129,7 +131,7 @@ CHANGE:
 Add the @Input() hero property
 the Add the @Input() stuff goes in the export class HeroDetailComponent
 
-## 4 - Add services
+## 4. Add services
 
 *NOTES*
 
@@ -189,7 +191,7 @@ CHANGE:
 ```
 
 
-## 5 - Add navigation
+## 5. Add navigation
 
 ### Add the AppRoutingModule
 
@@ -327,7 +329,7 @@ CHANGE:
    ],
 ```
 
-## 6 - Get data from a server
+## 6. Get data from a server
 
 
 ### Simulate a data server
